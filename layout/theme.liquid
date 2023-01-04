@@ -237,8 +237,14 @@
   </head>
 
   <body class="gradient">
-    {% assign mydate = "2023-01-01" %}
-    {{ mydate | date }}
+    {% assign mydate1 = "2023-01-01" %}
+    {% assign mydate2 = "2023-01-02" %}
+    
+    {% if mydate1 < mydate2 %}
+    {{ mydate1 | date }}
+    {% else %}
+    {{ mydate2 | date }}
+    {% endif %}
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
