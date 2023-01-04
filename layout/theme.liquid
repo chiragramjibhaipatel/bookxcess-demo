@@ -237,7 +237,8 @@
   </head>
 
   <body class="gradient">
-    {{ "2023-01-21" | date: '%s' }}
+    {% assign mydate = "2023-01-01" %}
+    {{ mydate | date }}
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
